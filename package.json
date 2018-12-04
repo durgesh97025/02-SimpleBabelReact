@@ -1,0 +1,23 @@
+{
+  "name": "02-babel-react",
+  "version": "1.0.0",
+  "description": "Babel with React",
+  "main": "index.js",
+  "//":"This is comment",
+  "//":"build\":\"babel src --out-dir lib//if .babelrc is used",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "buildReact": "babel src --out-dir reactCompiled --presets @babel/preset-react",
+    "buildES6": "babel reactCompiled --out-dir lib --presets @babel/env",
+    "build":"babel src --out-dir lib --presets @babel/preset-react,@babel/preset-env"
+
+  },
+  "author": "durga",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0"
+  }
+}
